@@ -1,0 +1,7 @@
+<ion-view view-title="Contact list" data-tap-disabled="true">
+    <ion-content>
+        <ion-list>
+            <ion-checkbox ng-model="selection[contact.id]" ng-repeat="contact in contacts">{{contact.displayName}}</ion-checkbox>
+        </ion-list>
+    </ion-content>
+</ion-view>

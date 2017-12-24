@@ -1,0 +1,41 @@
+<ion-view title="Event details">
+    <ion-content>
+        <div class="list card">
+            <div class="item">
+                <div>
+                    <h1>{{event.name}}</h1>
+                </div>
+            </div>
+            <div class="item" style="padding:0px;">
+                <img class="full-image" src="{{event.category.image}}" />
+            </div>
+            <div class="item item-avatar">
+                <img src="img/user.png" />
+                <h2>By {{event.owner.name}}</h2>
+            </div>
+            <div class="item" ng-show="event.start"><i class="icon ion-calendar"></i>&nbsp;Starts {{moment(event.start).format("dddd, MMMM Do YYYY, h:mm:ss a")}}</div>
+            <div class="item" ng-show="event.end"><i class="icon ion-calendar"></i>&nbsp;Ends {{moment(event.end).format("dddd, MMMM Do YYYY, h:mm:ss a")}}</div>
+            <div class="item"><i class="icon ion-home"></i>&nbsp;{{event.address}}</div>
+            <div class="item item-body">
+                <div>
+                    {{event.description}}
+                </div>
+            </div>
+            <div class="item-divider">
+                <div class="row">
+                    <div class="col col-30">
+                        <button class="button button-block button-dark" ng-click="back()">
+                                <i class="icon ion-backspace-outline"></i>&nbsp;Back
+                        </button>
+                    </div>
+                    <div class="col col-40"></div>
+                    <div class="col col-30">
+                        <button class="button button-block button-positive" ng-click="share()">
+                            <i class="icon ion-share"></i>&nbsp;Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

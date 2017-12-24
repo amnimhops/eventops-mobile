@@ -1,0 +1,51 @@
+<ion-view view-title="Edit event">
+    <ion-content>
+        <div class="card">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="name" ng-model="event.name">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Categorized under
+                    <select ng-options="c as c.name for c in categories" ng-model="event.category"></select>
+                </div>
+            </label>
+            <div class="row">
+                <div class="col-50">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Start date</span>
+                        <input type="datetime-local" placeholder="name" ng-model="dates.start" />
+                    </label>
+                </div>
+                <div class="col-50">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">End date</span>
+                        <input type="datetime-local" placeholder="name" ng-model="dates.end" />
+                    </label>
+                </div>
+            </div>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Description</span>
+                <textarea placeholder="description" ng-model="event.description" rows="3"></textarea>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Location</span>
+                <input type="string" placeholder="name" ng-model="event.address" ng-disabled="true"/>
+            </label>
+            <ion-checkbox ng-model="event.public">Public event?</ion-checkbox>
+            <div class="button-bar">
+                <button class="button button-balanced" ng-click="getGPSCoords();">
+                    <i class="icon ion-location"></i>&nbsp;Just here!
+                </button>
+                <button class="button button-calm" ng-click="findInMap();">
+                    <i class="icon ion-earth"></i>&nbsp;Locate
+                </button>
+                <button class="button button-positive" ng-click="done();">
+                    <i class="icon ion-checkmark"></i>&nbsp;Done!
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

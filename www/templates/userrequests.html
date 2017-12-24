@@ -1,0 +1,24 @@
+<ion-view view-title="My requests">
+    <ion-content>
+        <ion-refresher pulling-text="Refresh!" on-refresh="refresh();"></ion-refresher>
+        <div class="item item-divider">Received requests</div>
+        <li class="item item-toggle" ng-repeat="request in receivedRequests">
+            <strong>{{request.event.name}}</strong> from <span style="font-style:italic;">{{request.sender.name}}</span>
+            <label class="toggle toggle-balanced">
+                <input type="checkbox" ng-model="request.accepted" ng-click="changeAcceptance(request);">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </li>
+
+        <div class="item item-divider">Sent requests</div>
+        <ion-list>
+            <ion-item class="item-icon-left" ng-repeat="request in sentRequests" on-swipe-left="swiped();">
+                <i class="icon" ng-class="{'ion-checkmark-circled':request.accepted,'ion-help-circled':!request.accepted}"></i>
+                <span>To <strong>{{request.user.name}}</strong> for</span> <span style="font-style:italic">{{request.event.name}}</span>
+                <ion-option-button class="button-assertive" ng-click="deleteRequest(request)"><i class="icon ion-trash-a"></i></ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

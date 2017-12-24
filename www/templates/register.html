@@ -1,0 +1,25 @@
+<ion-view view-title="Register">
+    <ion-content>
+        <div class="card">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="name" ng-model="registerform.name">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input type="text" placeholder="email" ng-model="registerform.email">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="password" ng-model="registerform.password">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">City</span>
+                <input type="text" placeholder="city" ng-model="registerform.city">
+            </label>
+            <button class="button button-full button-balanced" ng-click="register()">
+                Create account
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

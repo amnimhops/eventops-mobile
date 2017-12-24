@@ -1,0 +1,12 @@
+<ion-view view-title="Map" data-tap-disabled="true">
+    <ion-content scroll="false">
+        <div id="location-picker-map" style="width:100%;height:100%;"></div>
+    </ion-content>
+    <ion-footer-bar class="bar bar-dark">
+        <div class="row">
+            <button class="col-40 button button-clear" ng-click="gotoGPS();"><i class="icon ion-navigate"></i>&nbsp;My position</button>
+            <button class="col-40 button button-clear" ng-click="setLocationToCenter();"><i class="icon ion-location"></i>&nbsp;Event here</button>
+            <button class="col-20 button button-positive" ng-click="done();"><i class="icon ion-checkmark-circled"></i>&nbsp;Done!</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>
