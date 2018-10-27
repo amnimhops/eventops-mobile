@@ -17,3 +17,5 @@ Clone this repository and run `ionic serve` (you must have installed ionic CLI)
 **Known issues**
 - When running the client in the browser , pressing F5 leads to an state where the factories lost the authentication parameters (just press F5 again and the app brings you again to the login page)
 - The **share** button (both) always shows an error. This happens because the IBM cloud email service "Sendgrid" is a paid service, and my budget is too low :sweat_smile:
+
+EOF
